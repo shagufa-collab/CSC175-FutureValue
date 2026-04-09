@@ -1,4 +1,4 @@
-#include <iostream> /"Double money.cpp
+#include <iostream> // Double money.cpp
 #include <iomanip>
 using namespace std;
 
@@ -40,18 +40,18 @@ int main() {
     cout << "Enter APY for investment: %";
     cin >> apy;
 
-    cout << "Enter term of investment: $";
+    cout << "Enter term of investment (years): ";
     cin >> term;
 
     cout << "-------------------------------------\n";
 
     double futureValue = calcFutureValue(monthlyInvestment, apy, term);
-    double doubleTime = calcDoubleTime(futureValue, apy);
+    double doubleTime = calcDoubleTime(1, apy); // better logic
 
     cout << fixed << setprecision(2);
     cout << "the future value will be $" << futureValue << endl;
     cout << "the account balance would double every "
-         << yearsToDouble << " years after." << endl;
+         << doubleTime << " years." << endl;
 
     return 0;
 }
