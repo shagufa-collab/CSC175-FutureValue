@@ -46,7 +46,7 @@ int main() {
     cout << "-------------------------------------\n";
 
     double futureValue = calcFutureValue(monthlyInvestment, apy, term);
-    double doubleTime = calcDoubleTime(1, apy); // better logic
+    double doubleTime = calcDoubleTime(1, apy);
 
     cout << fixed << setprecision(2);
     cout << "the future value will be $" << futureValue << endl;
